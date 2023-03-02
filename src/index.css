@@ -1,0 +1,83 @@
+/* @font-face {
+  font-family: "Graphie-Regular";
+  src: url("./assets/fonts/Graphie-Regular.otf");
+  src: url("./assets/fonts/Graphie-Regular.otf") format("woff"),
+    url("./assets/fonts/Graphie-Regular.otf") format("opentype"),
+    url("./assets/fonts/Graphie-Regular.otf") format("svg");
+  font-display: swap;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@100;300;400;500;700;800;900&family=Karla:wght@200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Lobster&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200;300;400;500;600;700;900&display=swap");
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* color: #cfe8de33; */
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 12px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+}
+
+@keyframes loadingSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loadingSpinner {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.loadingSpinner {
+  border: 2px solid #fff;
+  position: relative;
+  z-index: 3000;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: loadingSpinner 0.7s infinite linear;
+  -webkit-animation: loadingSpinner 0.7s infinite linear;
+}
+
+.loader-container {
+  height: 100vh;
+  /* align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  text-align: center;
+  line-height: 1.6rem; */
+}
+
+.loader-container-inner {
+  margin-top: 40vh;
+  /* display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10; */
+}

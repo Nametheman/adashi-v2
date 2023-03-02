@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 3.5rem;
+            position: relative;
+            left: 37%;
+            margin: 1rem auto;
+        }
+
+        .header {
+            color: #4F5270;
+            font-weight: bold;
+        }
+
+        .greeting>p {
+            color: #4F5270;
+        }
+
+        .greeting :first-child {
+            text-align: left;
+        }
+
+        button {
+            width: 26%;
+            padding: 1rem 1.5rem;
+            background-color: #08CB7B;
+            border-radius: 5px;
+            border-style: none;
+            color: #F6FEFD;
+            margin: .5rem auto;
+        }
+
+        .link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .link a {
+            width: 100%;
+            margin: 1rem auto;
+        }
+
+        .link_text {
+            color: #4F5270;
+        }
+
+        .sender_name {
+            width: 100%;
+        }
+
+        @media (max-width: 960px) {
+            button {
+                width: 95%;
+            }
+
+            img {
+                left: auto;
+            }
+
+            .greeting>p {
+                text-align: initial;
+            }
+
+            .link {
+                display: block;
+            }
+
+            .link a {
+                width: 90%;
+                font-size: 13px;
+                margin: 1rem auto;
+            }
+
+            .sender_name {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <img src="{{ asset('assets/images/logo/adashi.png') }}" alt="logo">
+    <section>
+        <h2 class="header">You have been added to a new group savings plan</h2>
+        <div class="greeting">
+
+            <p> Hello,</p>
+            <p>You have been added to the {{ $data->name }} group savings plan by {{ $data->owner->name }}
+                If interested, You will be required to accept the request after
+                creating an account on our platform,
+                This plan will require that you pay the sum of
+                {{ number_format($data->amount) }} {{ $data->plan }}
+                Please, note that the saving plan will only start if all members
+                accept the request to join the group.
+            </p>
+            <p style="color: #4f5270">
+                Click to accept the request
+            </p>
+        </div>
+        <a href="{{ $callback }}" style="
+                width: 26%;
+                padding: 1rem 1.5rem;
+                background-color: #08cb7b;
+                border-radius: 5px;
+                border-style: none;
+                color: #f6fefd;
+                margin: 0.5rem auto;
+              ">
+            Accept Request
+        </a>
+        <p> Thanks, for using Adashi</p>
+
+
+        </div>
+
+
+
+    </section>
+</body>
+
+</html>

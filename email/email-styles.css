@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Graphie-Regular";
+  src: url("./assets/fonts/Graphie-Regular.otf");
+  src: url("./assets/fonts/Graphie-Regular.otf") format("woff"),
+    url("./assets/fonts/Graphie-Regular.otf") format("opentype"),
+    url("./assets/fonts/Graphie-Regular.otf") format("svg");
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: Graphie-Regular !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.h-wrapper {
+  background-image: url("./assets/img/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  max-height: 400px;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.first h1 {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.services-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.macbook {
+  position: relative;
+  top: 110px;
+  width: 800px;
+  height: 459px;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.services-row p {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-inline-start: 2rem;
+  margin-inline-end: 2rem;
+  margin-top: 7rem;
+  width: 100%;
+}
+
+.line {
+  border: 1px dashed #000000;
+  margin-inline-start: 2rem;
+  margin-inline-end: 2rem;
+  width: 100%;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-wrapper button {
+  background: #059157;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  padding: 1rem;
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.btn-wrapper button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1400px) {
+}
+@media screen and (min-width: 1200px) {
+}
+@media screen and (min-width: 992px) {
+  .main {
+    width: 80%;
+  }
+
+  .line {
+    width: 80%;
+  }
+
+  .services-row {
+    width: 60%;
+  }
+
+  .btn-wrapper button {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .h-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .first {
+    width: 50%;
+  }
+
+  .second {
+    width: 50%;
+  }
+
+  .btn-wrapper button {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (max-width: 1400px) {
+  .macbook {
+    width: 700px;
+    height: 403px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .macbook {
+    width: 500px;
+    height: 287px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .first {
+    margin-top: 0;
+  }
+
+  .second {
+    height: 250px;
+  }
+
+  .macbook {
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .first {
+    margin-top: 0;
+  }
+
+  .first h1 {
+    margin-top: 1rem;
+  }
+
+  .services-row {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .second {
+    height: 150px;
+  }
+
+  .macbook {
+    top: 20px;
+    width: 350px;
+    height: 201px;
+  }
+}

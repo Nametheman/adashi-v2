@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- HTML Meta tags -->
+    <title>AdashiEsusuAkawo</title>
+    <meta name="description" content="Revolutionizing the age long Adashi/Esusu/Akawo traditional contribution" />
+
+    <!-- Google / Search Engine tags -->
+    <!-- <meta itemprop="name" content="Adashi Esusu Akawo" /> -->
+    <meta itemprop="name" content="AdashiEsusuAkawo" />
+    <meta itemprop="description" content="Revolutionizing the age long Adashi/Esusu/Akawo traditional contribution" />
+    <meta itemprop="image" content="%PUBLIC_URL%/adashi-layer.png" />
+
+    <!-- Facebook, Whatsapp Meta tags -->
+    <meta property="og:url" content="%PUBLIC_URL%" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AdashiEsusuAkawo" />
+    <meta property="og:description" content="Revolutionizing the age long Adashi/Esusu/Akawo traditional contribution" />
+    <meta property="og:image" content="%PUBLIC_URL%/adashi-layer.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AdashiEsusuAkawo" />
+    <meta name="twitter:description" content="Revolutionizing the age long Adashi/Esusu/Akawo traditional contribution" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/adashi-layer.png" />
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha512-0S+nbAYis87iX26mmj/+fWt1MmaKCv80H+Mbo+Ne7ES4I6rxswpfnC6PxmLiw33Ywj2ghbtTw0FkLbMWqh4F7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Adashi</title>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+<script>
+    const userToken = localStorage.getItem('token');
+    // const LANDING_URL = process.env.REACT_APP_FRONTEND_URL;
+    // console.log("%REACT_APP_FRONTEND_URL%");
+
+    //Start checking idle time
+    this.lastActiveTime = new Date();
+    //update time when there is an activity
+    window.onclick = function() {
+        this.lastActiveTime = new Date();
+    };
+    window.onmousemove = function() {
+        this.lastActiveTime = new Date();
+    };
+    window.onkeypress = function() {
+        this.lastActiveTime = new Date();
+    };
+    window.onscroll = function() {
+        this.lastActiveTime = new Date();
+    };
+
+    window.setInterval(CheckIdleTime, 10000);
+
+    function CheckIdleTime() {
+        //returns idle time every 10 seconds
+        let dateNowTime = new Date().getTime();
+        let lastActiveTime = new Date(this.lastActiveTime).getTime();
+        let remTime = Math.floor((dateNowTime - lastActiveTime) / 1000);
+        if (remTime >= 300) {
+            if (
+                window.location.pathname === '/login' ||
+                window.location.pathname === '/signup' ||
+                window.location.pathname === '/forgot-password' ||
+                window.location.pathname === '/verify' ||
+                window.location.pathname === '/resend-link'
+            ) {
+                localStorage.clear();
+                return;
+            }
+            localStorage.clear();
+            window.location.href = `${window.location.origin}/login?redirect=${window.location.pathname}`;
+            return;
+        }
+        // console.log(
+        //   "Idle since " +
+        //     remTime +
+        //     " Seconds Last active at " +
+        //     this.lastActiveTime
+        // );
+    }
+</script>
+
+</html>

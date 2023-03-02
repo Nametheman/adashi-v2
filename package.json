@@ -1,0 +1,134 @@
+{
+  "name": "adashi-v2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^7.0.0-alpha.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@react-pdf/renderer": "^2.1.1",
+    "@reduxjs/toolkit": "^1.9.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.23",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "antd": "^4.19.3",
+    "aos": "^2.3.4",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^5.7.1",
+    "chart.js": "^3.7.1",
+    "gsap": "^3.11.3",
+    "html2canvas": "^1.4.1",
+    "immutability-helper": "^3.1.1",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.29.1",
+    "process": "^0.11.10",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.32.1",
+    "react-moment": "^1.1.1",
+    "react-paystack": "^3.0.5",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "react-toastify": "^8.1.1",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "^5.3.3",
+    "util": "^0.12.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "import"
+    ],
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "eslint:recommended",
+      "plugin:import/recommended",
+      "plugin:import/typescript"
+    ],
+    "rules": {
+      "no-duplicate-imports": "warn",
+      "no-unused-vars": "warn",
+      "no-multiple-empty-lines": [
+        "warn",
+        {
+          "max": 1,
+          "maxEOF": 0,
+          "maxBOF": 0
+        }
+      ],
+      "import/first": "warn",
+      "import/newline-after-import": "warn",
+      "import/no-duplicates": "warn",
+      "import/no-unassigned-import": "warn",
+      "import/order": [
+        "warn",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "pathGroups": [
+            {
+              "pattern": "@custom-lib/**",
+              "group": "external",
+              "position": "after"
+            }
+          ],
+          "pathGroupsExcludedImportTypes": [
+            "builtin"
+          ],
+          "alphabetize": {
+            "order": "asc"
+          },
+          "newlines-between": "always"
+        }
+      ],
+      "sort-imports": [
+        "warn",
+        {
+          "allowSeparatedGroups": true,
+          "ignoreDeclarationSort": true
+        }
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/react-beautiful-dnd": "^13.1.2",
+    "@types/styled-components": "^5.1.22",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "typescript": "^4.6.4"
+  }
+}

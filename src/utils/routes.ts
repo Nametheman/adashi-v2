@@ -1,0 +1,24 @@
+export const home = '/';
+export const user = '/user';
+// export const dashboard = "/dashboard";
+export const transactions = 'transactions';
+export const settings = 'settings';
+export const withdrawal = 'withdrawal';
+export const stash = 'stash';
+export const savings = 'savings';
+export const individualSavings = 'individual-savings';
+export const individualSavingsForm = 'individual-savings-form';
+export const targetGroupSavings = 'target-group-savings';
+export const targetGroupSavingsForm = 'target-group-savings-form';
+export const cooperativeGroupSavings = 'cooperative-group-savings';
+export const cooperativeGroupSavingsLanding =
+  'cooperative-group-savings-landing';
+export const cooperativeGroupSavingsForm = 'cooperative-group-savings-form';
+export const indSavingsPlan = 'individual-savings-plan';
+export const tarGrpSavingsPlan = 'target-group-savings-plan';
+export const coopGrpSavingsPlan = 'cooperative-group-savings-plan';
+export const editIndSav = 'individual-savings/edit';
+export const editCoopGrp = 'cooperative-group-savings/edit';
+export const editTarGrp = 'target-group-savings/edit';
+export const verifyPay = 'verify-payment';
+export const verifyCard = 'verify-card';
