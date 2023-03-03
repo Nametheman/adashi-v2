@@ -48,16 +48,16 @@ const PlanInfo = (props: PlanInfoProps) => {
       <div className="card-main">
         <div className="card-row">
           <div className="start">
-            <p>Start Date</p>
-            <p>
+            <p style={{fontSize:'12px'}}>Start Date</p>
+            <p  style={{fontSize:'15px'}}>
               <Moment format="MMM DD, YYYY" style={{ fontWeight: "bold" }}>
                 {startDate}
               </Moment>
             </p>
           </div>
           <div className="end">
-            <p>Maturity Date</p>
-            <p className="d-flex flex-col">
+            <p style={{fontSize:'12px'}}>Maturity Date</p>
+            <p className="d-flex flex-col" style={{fontSize:'15px'}}>
               {isMature ? (
                 <b style={{ color: "#059157" }}>Plan is mature</b>
               ) : (
@@ -70,13 +70,13 @@ const PlanInfo = (props: PlanInfoProps) => {
         </div>
         <div className="card-row">
           <div className="type">
-            <p>Plan Type</p>
+            <p style={{fontSize:'12px'}}>Plan Type</p>
             <p>
               <b>{planType}</b>
             </p>
           </div>
           <div className="next">
-            <p>Next Savings Date</p>
+            <p style={{fontSize:'12px'}}>Next Savings Date</p>
             <p>
               {nextSavingsDate ? (
                 <Moment format="MMM DD, YYYY" style={{ fontWeight: "bold" }}>
@@ -90,7 +90,7 @@ const PlanInfo = (props: PlanInfoProps) => {
         </div>
         <div className="card-row">
           <div className="debit">
-            <p>Debit Card</p>
+            <p style={{fontSize:'12px'}}>Debit Card</p>
             {debitCardNo && debitCardType ? (
               <p>
                 <img src={cardImg} alt="card logo" style={{ width: "50px" }} />
@@ -101,7 +101,7 @@ const PlanInfo = (props: PlanInfoProps) => {
             )}
           </div>
           <div className="status">
-            <p>Status</p>
+            <p style={{fontSize:'12px'}}>Status</p>
             <p>
               <b>{status}</b>
             </p>
@@ -121,10 +121,10 @@ const PlanInfo = (props: PlanInfoProps) => {
 };
 
 const Wrapper = styled.div`
-  min-height: 347px;
+  min-height: 320px;
   background: #ffffff;
   // background: rgba(207, 232, 222, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 20px;
   padding: 1rem 2rem;
@@ -136,11 +136,12 @@ const Wrapper = styled.div`
   }
 
   .line {
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    // border: 0.1px solid rgba(0, 0, 0, 0.01);
   }
 
   .title {
     h2 {
+      font-size: 17px;
       color: #33277b;
     }
     margin-bottom: 1rem;
@@ -165,6 +166,10 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       align-items: end;
+    }
+
+    .start{
+
     }
   }
 

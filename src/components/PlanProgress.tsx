@@ -86,14 +86,14 @@ const PlanProgress = (props: PlanProgressProps) => {
             showInfo={false}
           />
           <div className="card-btm">
-            <p>{achievedPercent}% achieved</p>
+            <p className="achieved">{achievedPercent}% achieved</p>
             <p className="target">
               {/* <b>{achievedAmt > 0 ? format4dpNumber(achievedAmt) : 0}</b> */}
               Target:{" "}
               <NairaIcon
                 style={{
-                  width: "13px",
-                  height: "14px",
+                  width: "12px",
+                  height: "12px",
                   marginInlineStart: "0.5rem",
                 }}
                 className="savingsIcon"
@@ -120,10 +120,11 @@ const PlanProgress = (props: PlanProgressProps) => {
 
 const Wrapper = styled.div`
   min-height: ${(props: PlanProgressProps) =>
-    props.cardHeight ? `${props.cardHeight}px` : "347px"};
+    props.cardHeight ? `${props.cardHeight}px` : "320px"};
+    
   background: #ffffff;
   // background: rgba(207, 232, 222, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 20px;
   padding: 1rem 2rem;
@@ -131,11 +132,12 @@ const Wrapper = styled.div`
   text-transform: capitalize;
 
   .line {
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    // border: 1px solid rgba(0, 0, 0, 0.4);
   }
 
   .title {
     h2 {
+      font-size: 17px;
       color: #33277b;
     }
     margin-bottom: 1rem;
@@ -167,7 +169,11 @@ const Wrapper = styled.div`
           color: #fff !important;
         }
         .savingsIcon {
+          height: 17px;
           margin-inline-end: 0.25rem;
+        }
+        b{
+          font-size: 20px;
         }
       }
 
@@ -198,8 +204,11 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-
+    .achieved{
+      font-size: 13px;
+    }
     .target {
+      font-size: 13px;
       display: flex;
       align-items: center;
     }

@@ -42,14 +42,22 @@ const PlanTransactionTable = (props: PlanTransactionTableProps) => {
                 // const isWalletTrans: boolean = item.reference.split("-")[0] === "WT";
                 // const isWithdrawal: boolean = item.reference.split("-")[0] === "ptba";
                 return (
-                  <tr key={index}>
+                  <tr key={index} style={{background: `${index % 2 === 0 ? '#FFF' : '#EEEFEF'}`}}>
                     <td>
                       {/* <td style={{ width: "10%" }}> */}
                       <div className="icon align-middle">
                         {saving.type === "debit" ? (
-                          <img src={outImg} alt="outgoing" />
+                          <img 
+                            src={outImg} 
+                            width="30px"
+                            height="30px" 
+                            alt="outgoing" />
                         ) : (
-                          <img src={inImg} alt="incoming" />
+                          <img 
+                          src={inImg}     
+                          width="30px"
+                          height="30px" 
+                          alt="incoming" />
                         )}
                       </div>
                     </td>
@@ -103,17 +111,39 @@ const PlanTransactionTable = (props: PlanTransactionTableProps) => {
 };
 
 const Wrapper = styled.div`
+  margin-top: 20px;
+
   .trans-table {
     // font-size: 16px;
     padding: 0 !important;
     table {
-    },
+    
       th {
         padding: 0.5rem;
+        color: #9F9FB1;
+        font-size: 13px;
+        background: #F5FAF8;
       }
       td {
         color: #33277b;
         padding: 0.5rem;
+      }
+
+      thead{
+        tr{
+          th{
+            border-bottom-width: 0 !important;
+          }
+        }
+      }
+      tbody{
+        font-size:12px;
+        font-weight:600;
+        border-top: 0 !important;
+        td{
+          font-size-14px;
+          border-bottom-width: 0 !important;
+        }
       }
     }
     .header{

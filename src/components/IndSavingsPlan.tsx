@@ -343,7 +343,7 @@ IndSavingsPlan.Wrapper = styled.div`
     text-transform: capitalize;
 
     .line {
-      border: 1px solid rgba(0, 0, 0, 0.4);
+      // border: 1px solid rgba(0, 0, 0, 0.4);
     }
 
     .back {
@@ -371,7 +371,7 @@ IndSavingsPlan.Wrapper = styled.div`
       background: #33277b;
       border-radius: 20px;
       color: #fff;
-      padding: 1rem 6rem;
+      padding: 1rem 8rem;
       margin-bottom: 2rem;
 
       // .header-row {

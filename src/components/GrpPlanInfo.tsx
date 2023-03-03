@@ -136,7 +136,7 @@ const Wrapper = styled.div`
   // }
 
   .line {
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    // border: 1px solid rgba(0, 0, 0, 0.4);
   }
 
   .title {
