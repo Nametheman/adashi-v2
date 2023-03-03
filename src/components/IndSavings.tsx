@@ -103,7 +103,7 @@ IndSavings.Wrapper = styled.div`
     color: #33277b !important;
 
     .line {
-      border: 1px solid rgba(0, 0, 0, 0.4);
+      // border: 1px solid rgba(0, 0, 0, 0.4);
     }
 
     .row {
@@ -127,7 +127,7 @@ IndSavings.Wrapper = styled.div`
       justify-content space-between;
       background: #33277b;
       border-radius: 20px;
-      padding: 1rem 2rem 1rem 1rem;
+      padding: 1rem 2rem 1rem 2rem;
       color: #fff;
       margin-bottom: 2rem;
 

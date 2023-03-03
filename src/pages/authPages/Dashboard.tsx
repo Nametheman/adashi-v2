@@ -22,6 +22,7 @@ Dashboard.Wrapper = styled.div`
   // background: red;
   // width: 100vw;
   height: 100vh;
+  padding-bottom: 40px;
 `;
 
 export default Dashboard;

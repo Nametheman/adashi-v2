@@ -23,6 +23,16 @@ const TransactionTable2 = () => {
     refetch();
   }, [refetch]);
 
+  const arrData = data?.data
+
+
+// const daturm = () => {
+//   for (let datum of arrData) {
+//     return datum
+//   }
+// } 
+  console.log(data)
+
   return (
     <Wrapper className="col-12">
       <div className="trans-table">
@@ -56,7 +66,9 @@ const TransactionTable2 = () => {
                 const isWithdrawal: boolean =
                   item.reference.split("-")[0] === "ptba";
                 return (
-                  <tr key={index}>
+
+                  
+                  <tr key={index}  style={{background: `${index % 2 === 0 ? '#FFF' : '#EEEFEF'}`}}>
                     <td>
                       {/* <td style={{ width: "10%" }}> */}
                       <div className="icon align-middle">
@@ -64,15 +76,15 @@ const TransactionTable2 = () => {
                           <img
                             src={outImg}
                             alt="outgoing"
-                            width="40px"
-                            height="40px"
+                            width="30px"
+                            height="30px"
                           />
                         ) : (
                           <img
                             src={inImg}
                             alt="incoming"
-                            width="40px"
-                            height="40px"
+                            width="30px"
+                            height="30px"
                           />
                         )}
                       </div>
@@ -153,17 +165,39 @@ const TransactionTable2 = () => {
 };
 
 const Wrapper = styled.div`
+padding-bottom: 40px;
+
   .trans-table {
     // font-size: 16px;
     text-transform: capitalize;
     table {
-    },
+    
       th {
         padding: 0.5rem;
+        color: #9F9FB1;
+        font-size: 13px;
+        background: #F5FAF8;
       }
       td {
         color: #33277b;
         padding: 0.5rem;
+      }
+
+      thead{
+        tr{
+          th{
+            border-bottom-width: 0 !important;
+          }
+        }
+      }
+      tbody{
+        font-size:12px;
+        font-weight:600;
+        border-top: 0 !important;
+        td{
+          font-size-14px;
+          border-bottom-width: 0 !important;
+        }
       }
     }
     .header{
@@ -176,19 +210,20 @@ const Wrapper = styled.div`
       color: #ea0505b2;
       background: rgba(234, 5, 5, 0.15);
       border-radius: 5px;
-      padding: 0.5rem;
+      padding: 0.3rem;
     }
     .good {
       color: #059157;
       background: rgba(207, 232, 222, 0.2);
       border-radius: 5px;
-      padding: 0.5rem;
+      padding: 0.3rem;
     }
     .processing {
       color: #F3B756;
       background: rgba(207, 232, 222, 0.2);
       border-radius: 5px;
-      padding: 0.5rem;
+      // border: 1px solid red;
+      padding: 0.3rem;
     }
     .amt {
       display: flex;

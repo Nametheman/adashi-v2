@@ -53,14 +53,14 @@ const StashTransactionTable = () => {
                     item.reference.split("-")[0] === "WTU";
 
                   return (
-                    <tr key={index}>
+                    <tr key={index}  style={{background: `${index % 2 === 0 ? '#FFF' : '#EEEFEF'}`}}>
                       <td>
                         {/* <td style={{ width: "10%" }}> */}
                         <div className="icon align-middle">
                           {item.type === "debit" ? (
-                            <img src={outImg} alt="outgoing" />
+                            <img src={outImg} alt="outgoing" style={{height:'30px', width:'30px'}} />
                           ) : (
-                            <img src={inImg} alt="incoming" />
+                            <img src={inImg} alt="incoming" style={{height:'30px', width:'30px'}}/>
                           )}
                         </div>
                       </td>
@@ -108,17 +108,38 @@ const StashTransactionTable = () => {
 const Wrapper = styled.div`
   .trans-table {
     // font-size: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    // border: 1px solid rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     border-radius: 20px;
     table {
-    },
+      margin-top: 30px;
+    
       th {
+
         padding: 0.5rem;
+        color: #9F9FB1;
+        background: #F5FAF8;
       }
       td {
         color: #33277b;
         padding: 0.5rem;
+      }
+
+      thead{
+        tr{
+          th{
+            font-size: 13px;
+            border-bottom-width: 0 !important;
+          }
+        }
+      }
+      tbody{
+        font-size: 12px;
+        font-weight: 600;
+        border-top: 0 !important;
+        td{
+          border-bottom-width: 0 !important;
+        }
       }
     }
     .header{
@@ -143,6 +164,8 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction row;
       align-items: center;
+
+
     }
 
 

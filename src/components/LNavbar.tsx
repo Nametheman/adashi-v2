@@ -161,7 +161,7 @@ LNavbar.Wrapper = styled.div`
         color: #33277b;
         padding: 0.5rem 1rem 0.5rem 1rem;
         margin: 1rem;
-        border-radius: 20px;
+        border-radius: 8px;
         // font-size: 16px;
         font-style: normal;
         // font-weight: 600;
@@ -169,11 +169,13 @@ LNavbar.Wrapper = styled.div`
       }
       .nav-svg {
         fill: #33277b;
+        width: 25px;
       }
 
       .activ {
         color: #fff;
         background: #33277bcc;
+        // padding: 0.8rem 2.6rem;
         .nav-svg {
           fill: #fff;
         }

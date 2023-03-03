@@ -122,7 +122,7 @@ export const SavingsWrapper = styled.div`
     color: #33277b;
 
     .line {
-      border: 1px solid rgba(0, 0, 0, 0.4);
+      // border: 0.4px solid rgba(0, 0, 0, 0.4) !important;
     }
 
     .back {
@@ -146,17 +146,17 @@ export const SavingsWrapper = styled.div`
       flex-direction: column;
       align-items: flex-start;
       // justify-content: center;
-      padding: 2rem 3rem 2rem 3rem;
+      padding: 1rem 3rem 1rem 3rem;
       color: #47486b;
       // font-size: 16px;
       background: rgba(207, 232, 222, 0.2);
-      border-radius: 20px;
+      border-radius: 16px;
       cursor: pointer;
       height: 100%;
-      border: 1px solid rgba(0, 0, 0, 0.3);
+      border: 0.1px solid rgba(51, 39, 123, 0.05);
 
       img {
-        height: 120px;
+        height: 70px;
       }
     }
 

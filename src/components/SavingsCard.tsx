@@ -57,7 +57,7 @@ const SavingsCard = (props: SavingsCardProps) => {
     <Wrapper className="card-body" onClick={func}>
       <div className="card-head">
         <Heading4 style={{ marginBottom: "0.5rem" }}>{title}</Heading4>
-        {endDate && endDate <= currDate ? <OpenPadlockImg /> : <PadlockImg />}
+        {endDate && endDate <= currDate ? <OpenPadlockImg style={{height: '20px'}} /> : <PadlockImg />}
       </div>
       <div className="members">
         {members?.map((item: object, index: number) => (
@@ -132,7 +132,7 @@ const SavingsCard = (props: SavingsCardProps) => {
 
 const Wrapper = styled.div`
   background: rgba(207, 232, 222, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
   border-radius: 20px;
   padding: 1rem 2rem;
@@ -151,6 +151,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
+    // gap: 40px;
     h2 {
       color: #33277b;
     }
@@ -165,6 +166,8 @@ const Wrapper = styled.div`
         color: #fff !important;
       }
       .savingsIcon {
+        margin-top: 5px;
+        height: 15px; 
         margin-inline-end: 0.25rem;
       }
     }
@@ -173,10 +176,19 @@ const Wrapper = styled.div`
     }
     .target {
       margin-right: 1rem;
+
+      h2{
+        font-size: 20px;
+      }
     }
     .status {
       margin-left: 1rem;
       margin-right: 1rem;
+
+
+      h2{
+        font-size: 20px;
+      }
     }
   }
 
@@ -186,6 +198,7 @@ const Wrapper = styled.div`
     margin-top: 1rem;
     p {
       margin-bottom: 0.5rem;
+      font-size: 14px;
     }
   }
 

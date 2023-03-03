@@ -74,10 +74,13 @@ const Doughnut1 = () => {
         maxWidth: 100,
         labels: {
           color: '#33277B',
-          boxWidth: 20,
+          boxWidth: 14,
+          boxHeight: 14,
+          radius: '50%',
+          // radius: 50,
           font: {
-            // size: 14,
-            weight: '600',
+            size: 10,
+            weight: '500',
           },
         },
       },

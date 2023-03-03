@@ -28,6 +28,7 @@ export const Heading3 = styled.h3<HeadingType>`
 export const Heading4 = styled.h4<HeadingType>`
   color: ${({ color }: HeadingType) => color ?? "rgba(51, 39, 123, 1)"};
   font-weight: bold;
+  font-size: 20px;
   margin-bottom: 40px;
 `;
 export const Heading5 = styled.h5<HeadingType>`

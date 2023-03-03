@@ -173,7 +173,7 @@ const MyStash = () => {
               <div className='mb-2'>
                 <p>My Purse</p>
                 <h2 className='my-0 savings'>
-                  <NairaIcon style={{ marginInlineEnd: '0.25rem' }} />
+                  <NairaIcon style={{ marginInlineEnd: '0.25rem', marginTop: '8px' }} />
                   <b>
                     {stashBalNaira}.{stashBalKobo}
                   </b>
@@ -193,8 +193,8 @@ const MyStash = () => {
                 <WithdrawIcon
                   fill='#059157'
                   className='me-2'
-                  height={23.74}
-                  width={22}
+                  height={19}
+                  width={19}
                   aria-label='Withdraw icon'
                 />
                 Withdraw
@@ -268,7 +268,7 @@ MyStash.Wrapper = styled.div`
     }
 
     .line {
-      border: 1px solid rgba(0, 0, 0, 0.4);
+      // border: 1px solid rgba(0, 0, 0, 0.4);
     }
 
     // .row {
