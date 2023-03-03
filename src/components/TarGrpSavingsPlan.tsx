@@ -354,7 +354,7 @@ TarGrpSavingsPlan.Wrapper = styled.div`
     text-transform: capitalize;
 
     .line {
-      border: 1px solid rgba(0, 0, 0, 0.4);
+      // border: 1px solid rgba(0, 0, 0, 0.4);
     }
 
     .back {
